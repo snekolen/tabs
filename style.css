@@ -1,0 +1,9 @@
+/*Visibility*/
+
+.visible {
+    display: visible;
+}
+
+.hidden {
+    display: none; 
+}
