@@ -4,25 +4,25 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel = "stylesheet" href= "style.css">
-    <script src="login.js"></script>
-    <script src="script.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </head>
 
   <body>
     <!--Login page-->
     <div id = "login-page" class = "visible">
       <h1>Tabs</h1>
-      <div>
-        <span id = "error-message" class = "hidden">Unable to log in</span>
-        <h2 for="username">Username:</h2>
+      <div id = "form-div">
+        <span id = "error-message" style = "color:#FAFAF6">Incorrect username or password</span>
+        <h4 for="username">Username:</h4>
         <input type="text" id="username" name = "username">
         <br>
-        <h2 for="password">Password:</h2>
+        <h4 for="password">Password:</h4>
         <input type="text" id="password" name = "password">
         <br>
-        <button type="submit" onclick="login()">Login</button> <!--Fix submission later-->
       </div>
+      <button type="submit" onclick="login()">Login</button> <!--Fix submission later-->
     </div>
     
     <div id = "app-contents" class = "hidden">
