@@ -1,20 +1,22 @@
-const login = require('./data.json')
-const { Travellers } = login;
+const data = require('./data.json')
+const { Travellers } = data;
 
-
-//Login confirmation
-function log_in (username, password) {
-  //let loginSuccess = false;
-
-  if (username in Travellers && Travellers[username].password == password) {
-    console.log("Login successfully");
-    //loginSuccess = true;
-    return true;
-  }
-  else {
-    console.log("Login unsuccessfully")
-    return false;
-  }
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    fetch('./data.json')
+      .then(response => response.json())
+      .then(data => {
+        const { Travellers } = data;
+        if (username in Travellers && Travellers[username].password == password) {
+          document.getElementById("login-page").className = "hidden";
+          document.getElementById("app-contents").className = "visible";
+          document.getElementById("dashboard").className = "visible";
+          return true;
+        }
+        else {
+          document.getElementById("error-message").className = "visible";
+          return false;
+        }
+      });
 }
-
-//log_in('hma12', 'qwerty123')

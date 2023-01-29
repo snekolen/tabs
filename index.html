@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel = "stylesheet" href= "style.css">
+    <script src="login.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <!--Login page-->
+    <div id = "login-page" class = "visible">
+      <h1>Tabs</h1>
+      <div>
+        <span id = "error-message" class = "hidden">Unable to log in</span>
+        <h2 for="username">Username:</h2>
+        <input type="text" id="username" name = "username">
+        <br>
+        <h2 for="password">Password:</h2>
+        <input type="text" id="password" name = "password">
+        <br>
+        <button type="submit" onclick="login()">Login</button> <!--Fix submission later-->
+      </div>
+    </div>
+    
+    <div id = "app-contents" class = "hidden">
+        <div id = "curr-page">
+            <!--Dashboard-->
+            <div id = "dashboard" class = "hidden">
+                Dashboard
+            </div>
+
+            <!--Form-->
+            <div id = "info-form" class = "hidden">
+                Form
+            </div>
+
+            <!--Profile-->
+            <div id = "profile" class = "hidden">
+                Profile
+            </div>
+        </div>
+
+        <!--Navagation bar-->
+        <div id = "nav-bar">
+            <button id = "home-btn" onclick="to_dashboard()">Home</button>
+            <button id = "form-btn" onclick="to_form()">Form</button>
+            <button id = "profile-btn" onclick="to_profile()">Profile</button>
+        </div>
+    </div>
+  </body>
+</html>
